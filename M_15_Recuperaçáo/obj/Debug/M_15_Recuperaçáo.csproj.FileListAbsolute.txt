@@ -1,0 +1,26 @@
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\bin\Debug\M_15_Recuperaçáo.exe.config
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\bin\Debug\M_15_Recuperaçáo.exe
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\bin\Debug\M_15_Recuperaçáo.pdb
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.csproj.AssemblyReference.cache
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.csproj.SuggestedBindingRedirects.cache
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.Cacadores.f_cacador.resources
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.Form1.resources
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.Properties.Resources.resources
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.csproj.GenerateResource.cache
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.csproj.CoreCompileInputs.cache
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.exe
+C:\Users\eduardo gomes\Desktop\PSI\modulo 7AB\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.pdb
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\bin\Debug\M_15_Recuperaçáo.exe.config
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\bin\Debug\M_15_Recuperaçáo.exe
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\bin\Debug\M_15_Recuperaçáo.pdb
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.csproj.AssemblyReference.cache
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.csproj.SuggestedBindingRedirects.cache
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.Cacadores.f_cacador.resources
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.Form1.resources
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.Properties.Resources.resources
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.csproj.GenerateResource.cache
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.csproj.CoreCompileInputs.cache
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.exe
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.pdb
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.Armas.f_arma.resources
+C:\Users\eduardo gomes\Desktop\M_15_Recuperaçáo\M_15_Recuperaçáo\obj\Debug\M_15_Recuperaçáo.Pontuacao.f_pontuacao.resources
