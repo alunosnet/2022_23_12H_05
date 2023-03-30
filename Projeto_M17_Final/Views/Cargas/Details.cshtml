@@ -1,0 +1,66 @@
+﻿@model Projeto_M17_Final.Models.Carga
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<br/>
+<h2>Detalhes Carga</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.camiao.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.camiao.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motorista.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motorista.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.data_aquisicao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.data_aquisicao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.data_entrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.data_entrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valor_pago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valor_pago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CargaID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

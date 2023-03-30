@@ -1,0 +1,84 @@
+﻿@using Projeto_M17_Final.Helper
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - PATINTER</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #ff0000; ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="~/Home">PATINTER</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Home">Home</a>
+                    </li>
+
+
+                    @if (Request.IsAuthenticated && User.IsInRole("Administrador"))
+                    {
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Consultas</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="~/Utilizadores">Utilizadores</a>
+                                <a class="dropdown-item" href="~/Consultas/Pesquisa">Pesquisar Motoristas</a>
+                                <a class="dropdown-item" href="~/Consultas/MelhorMotorista">Melhor Motorista</a>
+                                <a class="dropdown-item" href="~/Consultas/CargasMotorista">Cargas</a>
+                            </div>
+                        </li>
+
+                    }
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Listas</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="~/Motoristas">Motoristas</a>
+                                <a class="dropdown-item" href="~/Camiaos">Camiões</a>
+                                <a class="dropdown-item" href="~/Cargas">Cargas</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                @Html.Raw("Olá " + User.Identity.Name)
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item">@Html.ActionLink("Editar perfil", "Edit/" + Html.UserId(User), "utilizadores")</a>
+                                <a class="dropdown-item">@Html.ActionLink("Terminar sessão", "Logout", "Login")</a>
+                            </div>
+                        </li>
+                    }
+                    @if (Request.IsAuthenticated == false)
+
+                    {
+
+                        <li class="nav-item flex-row-reverse">@Html.ActionLink("Login", "Index", "Login", null, new { @class = "nav-link" })</li>
+                    }
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - PATINTER</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/scripts/bootstrap.bundle.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Projeto_M17_Final.Models.Carga>
+
+@{
+    ViewBag.Title = "Cargas";
+}
+
+<br/>
+<h2>Cargas</h2>
+
+<p>
+    @Html.ActionLink("Criar nova carga", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.camiao.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motorista.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.data_aquisicao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.data_entrega)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valor_pago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descricao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.camiao.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motorista.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.data_aquisicao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.data_entrega)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valor_pago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descricao)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.CargaID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.CargaID }) |
+            @Html.ActionLink("Apagar", "Delete", new { id=item.CargaID })
+        </td>
+    </tr>
+}
+
+</table>

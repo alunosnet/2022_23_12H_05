@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Projeto_M17_Final.Models.Motorista>
+
+@{
+    ViewBag.Title = "Lista de Motoristas";
+}
+
+<br/>
+<h2>Motoristas</h2>
+
+<p>
+    @Html.ActionLink("Criar novo motorista", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Morada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @{
+                string nome = Server.MapPath("~/Public/" + item.MotoristaID + ".jpg");
+                if (System.IO.File.Exists(nome))
+                {
+                    <img src="@Url.Content(string.Format("~/Public/{0}.jpg", item.MotoristaID))" width="150" />
+                }
+            }
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Morada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataNascimento)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.MotoristaID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id = item.MotoristaID }) |
+            @if (Request.IsAuthenticated && User.IsInRole("Administrador"))
+            {
+                @Html.ActionLink("Apagar", "Delete", new { id = item.MotoristaID })
+            }
+        </td>
+    </tr>
+}
+
+</table>

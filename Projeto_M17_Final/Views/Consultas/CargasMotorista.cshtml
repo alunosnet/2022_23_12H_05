@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Cargas Motorista";
+}
+
+<br />
+<h2>Cargas Motorista</h2>
+
+<form method="post">
+    Nome motorista: 
+    <br/>
+    <input type="text" name="nome" class="form-control" />
+    <br/>
+    <input type="submit" value="Pesquisar" />
+</form>
+<hr />
+<div>
+
+@if (ViewBag.cargas != null)
+{
+    @ViewBag.cargas.nome <span>|</span>
+    @ViewBag.cargas.carga
+}
+</div>
+<hr />
+
+
