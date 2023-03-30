@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="M17_AB_Projeto.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="/Public/css/bootstrap.css" rel="stylesheet" />
+    <link href="/Public/css/css.css" rel="stylesheet" />
+    <script src="/Public/js/bootstrap.bundle.js"></script>
+
+    <script src="/Public/js/codigo.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/index.aspx">Motaires</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/index.aspx">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+
+          <!--admin-->
+          <% if (Session["perfil"] != null && Session["perfil"].Equals("0"))
+              {%>
+        <li class="nav-item">
+          <a class="nav-link" href="/Admin/Admin.aspx">Área Administrador</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Admin/Produtos/Produtos.aspx">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Admin/Compradores/Compradores.aspx">Compradores</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/Admin/Compras/compras.aspx">Compras</a>
+        </li>
+          <%}%>
+
+          <!--Menu do utilizador-->
+          <% if (Session["perfil"] != null && Session["perfil"].Equals("1")){%>
+        <li class="nav-item">
+          <a class="nav-link" href="/User/Compras/historico.aspx">Área Utilizadores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/User/Compras/Compras.aspx">Comprar</a>
+        </li>
+        
+          <%}%>
+
+          <!-- Menu Home-->
+          <% if (Request.Url.LocalPath.ToLower().EndsWith("index.aspx")){%>
+          <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Produtos</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="index.aspx?tipo=capacetes">Capacetes</a>
+                    <a class="dropdown-item" href="index.aspx?tipo=manutenção">Manutenção</a>
+                    <a class="dropdown-item" href="index.aspx?tipo=acessórios">Acessórios</a>
+                </div>
+          </li>
+           <%}%>
+      </ul>
+        <ul class="navbar-nav">
+            <% if (Session["perfil"] == null){%>
+            <li class="nav-item">
+                <a class="nav-link" href="/registo.aspx">Registar</a>
+            </li>
+               <%}else{%>
+            <a class="nav-link" href="Carrinho.aspx">
+                 <img src="Public/Imagens/logoM2.png" style="width: 40px; height: 40px;"/>
+            </a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><% Response.Write(Session["nome"]); %></a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown02">
+                    <a class="dropdown-item" href="/logout.aspx">Terminar Sessão</a>
+                </div>
+            </li>
+               <%}%>
+        </ul>
+   </nav>
+              <!--Menu-->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                    <!--Aviso dos cookies-->
+            <div runat="server" id="div_aviso">
+                <footer class="footer">
+                    <div class="container">
+                        Este site utiliza cookies.
+                    <asp:Button runat="server" ID="bt1" OnClick="bt1_Click" 
+                        CssClass="btn btn-outline-primary float-right"
+                        Text="Aceitar" />
+                    </div>
+                </footer>
+            </div>
+    </form>
+    
+            
+</body>
+</html>
